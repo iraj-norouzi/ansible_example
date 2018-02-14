@@ -1,0 +1,11 @@
+---
+ - hosts: update
+   user: root
+   sudo: yes
+   tasks:
+    - name: copy script file
+      copy: src=/root/restart_offline_server.sh  dest=/root/restart_offline_server.sh mode=755
+    - name: update last tag IBSng
+      command: nohup bash /root/restart_offline_server.sh &
+      args:
+        chdir: /root/
