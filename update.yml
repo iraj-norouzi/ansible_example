@@ -9,3 +9,10 @@
       command: nohup bash /root/restart_offline_server.sh &
       args:
         chdir: /root/
+
+    - name: install ansible on zahedan
+      apt:
+        pkg: ansible #packages
+        state: latest #build-dep
+
+
