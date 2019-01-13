@@ -1,0 +1,4 @@
+  1 - hosts: server
+  2   tasks:
+  3   - name: httpd is installed
+  4     yum: name=httpd state=installed
