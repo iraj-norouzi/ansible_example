@@ -1,0 +1,10 @@
+---
+- hosts: 10.11.12.67
+  user: root
+  become: no
+  tasks:
+  roles:
+    - stop
+    - start
+    - status
+#ansible-playbook main.yml --tags "status"
