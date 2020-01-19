@@ -1,0 +1,13 @@
+---
+- hosts: 10.11.12.67
+  user: root
+  become: no
+  tasks:
+  - name: core status please wait...
+    shell:
+       "php index.php status"
+    args:
+       chdir: "/home/iGap/"
+    register: status
+  - debug: msg="{{ status.stdout_lines }}"
+
